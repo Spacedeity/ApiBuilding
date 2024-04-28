@@ -20,5 +20,9 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-  path('', views.index)
+    path('', views.index,  name='index'),                        #create paths to my other html files
+    path('random-meal/', views.food, name='random_meal'),
+    path('art/', views.art, name='art')
+    
+
 ]

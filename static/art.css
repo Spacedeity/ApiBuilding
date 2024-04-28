@@ -1,0 +1,247 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+  }
+  
+body{
+      font-family: roboto;
+      /* color: #239ee6; */
+      background-size: cover;
+      background-repeat: none;
+      background-image: url('images/artbck.jpg');
+    }
+
+
+     /* the navigation section styling */
+   header{
+    height:50px;
+   }
+   nav {
+    width:100%;
+    backdrop-filter: blur(2);
+    /* background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% ); */
+  }
+  
+  .navbar-brand{
+    font-family:roboto;
+    color: #00EBA0;
+    transition-duration: 300ms;
+  }
+  
+  .navbar-brand:hover{
+    color: aliceblue;
+    transform: translateY(-5px);
+    transition-duration: 300ms;
+  }
+  
+  .navbar ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar ul li{
+    margin: 0 10px;
+    justify-content: space-around;
+  }
+  
+  .nav-link {
+    
+    margin: 0px 20px;
+    padding:10px;
+    font-weight: 400;
+    font-family: Roboto;
+  }
+  
+  li {
+    border-radius: 5px;
+    transition-duration: 300ms;
+  }
+  
+  li:focus, li:hover {
+    transform: translateY(-5px);
+    background-color: #c2f5e4be;
+  }
+    
+  .box1{
+   
+    margin-top: 40px;
+    display:flex;
+    font-family:poppins;
+    color:#c2cfd4;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-radius: 5px 15px 15px 5px;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  }
+.card-title{
+   
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight:700;
+  color:darkcyan;
+}
+.card1{
+  display: flex;
+    align-items: center;
+    border-radius: 5px 0 0 5px;
+    overflow: hidden;
+}
+.card-body{
+ 
+  flex:1;
+  padding:10px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 200px; /* Set a maximum height for the card body */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Microsoft Edge */
+}
+.card-body::-webkit-scrollbar {
+  display: none;
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .box1 {
+    flex-direction: column; /* Stack the elements vertically */
+}
+
+  .box2 {
+    flex-direction: column; 
+}
+
+.card1 {
+    flex-direction: column; /* Stack the image and card body vertically */
+}
+.img-fluid{
+  max-width: 100%;
+  height: 200px;
+}
+.card-body {
+    max-height: 40vh; /* Remove max-height restriction */
+    overflow-y: auto; /* Disable scrolling */
+}
+}
+.card-text{
+  text-align: center;
+ 
+}
+.box2{
+   
+    height:400px;
+    margin-top:40px;
+    display: flex;
+    flex-direction: column;
+    font-family: poppins;
+    margin-top: 15px;
+    color:#c2cfd4;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+
+
+
+
+
+
+
+
+  
+  
+  img{
+    margin-left:10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px 15px 15px 5px;
+    clear:right;
+  }
+/* styling for the reload button */
+    #btn{
+        display: inline-block;
+        padding: 5px;
+        font-size: 18px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: fixed; 
+        bottom: 20px;    
+        right: 20px;      
+         z-index: 1000;    /* Ensure it's on top of other content */
+         background-image: linear-gradient( 58.2deg,  rgba(40,91,212,0.73) -3%, rgba(171,53,163,0.45) 49.3%, rgba(255,204,112,0.37) 97.7% );
+        
+        }
+        #btn:hover{
+          background-image: linear-gradient( 109.6deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
+       
+      }
+        .fa-yin-yang{
+          margin-top: 0px;
+          font-size: 15px;
+          color:rgb(100, 211, 241);
+         animation: myspin 103ms infinite; /*for smooth rotation*/
+          
+        }
+        
+@keyframes myspin {    /*used keyframes to create a animation where the icon is spining
+                                attached to the page reload button*/
+      0% {
+      /* color: rgb(224, 243, 248);  */
+      transform: rotate(0deg);
+      }
+      
+      100% {
+      /* color: rgb(3, 0, 0); */
+      transform: rotate(360deg);
+      
+      }
+      }
+      #btn .tooltip{
+        visibility: hidden;
+        width: 90px;
+        content:"";
+        position: absolute;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        border-radius: 20px;
+        text-align: center;
+        transition: opacity 0.3s;
+        background-image: linear-gradient( 90.2deg,  rgba(79,255,255,1) 0.3%, rgba(0,213,255,1) 99.8% );
+      }
+      
+      #btn:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+        /* styling the footer section */
+      footer{
+          margin-top: 15px;
+          height: 100px;
+          backdrop-filter: blur(5px);
+          /* background-image: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% ); */
+        }
+        i{
+          color: rgb(115, 188, 252);
+          padding: 7px;
+          font-size: 18px;
+          transition: all 1000ms;
+        }
+        #insta:hover{
+          background-color: #fd0bdd;
+        }
+        #wats:hover{
+          background-color: #109e63;
+        }
+        #dis:hover{
+          background-color: #2010f8;
+        }
+        #sms:hover{
+          background-color: #9c09f1;
+        }

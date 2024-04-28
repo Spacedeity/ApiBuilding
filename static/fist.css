@@ -1,0 +1,237 @@
+*{
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+  /* background styling */
+
+.bck{
+    font-family: roboto;
+    color: #239ee6;
+    background-image: linear-gradient(135deg, #0f0f0f 0%, #000307 100%);
+  }
+
+     /* navigation sector styling */
+ header{
+  height:50px;
+ }
+ nav {
+  width:100%;
+  background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );
+}
+
+.navbar-brand{
+  font-family:roboto;
+  color: #00EBA0;
+  transition-duration: 300ms;
+}
+
+.navbar-brand:hover{
+  color: aliceblue;
+  transform: translateY(-5px);
+  transition-duration: 300ms;
+}
+
+.navbar ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li{
+  margin: 0 10px;
+  justify-content: space-around;
+}
+
+.nav-link {
+  
+  margin: 0px 20px;
+  padding:10px;
+  font-weight: 400;
+  font-family: Roboto;
+}
+
+li {
+  border-radius: 5px;
+  transition-duration: 300ms;
+}
+
+li:focus, li:hover {
+  transform: translateY(-5px);
+  background-color: #f1f7f5be;
+}
+
+
+ /* the first section styling
+ 
+ */
+ .home-pg{
+  height:300px;
+  font-family: roboto;
+  color:#C1D7F0;
+  display: flex;
+  margin: 20px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: radial-gradient( circle 815px at 23.4% -21.8%,  rgba(9,29,85,1) 0.2%, rgb(8, 8, 8) 100.2% );
+
+  }
+.home-pg h{
+ font-size: 1.5em;
+}
+
+  /* second section styling */
+
+
+.pg2{
+  height:300px;
+  font-family: roboto;
+  color: #C1D7F0;
+  display: flex;
+  margin:20px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+}
+
+/* third section styling */
+
+.pg3{
+  height:300px;
+  font-family: roboto;
+  color: #A5C5E9;
+  display: flex;
+  margin: 20px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient( 94.3deg,  rgb(21, 25, 46) 10.9%, rgb(21, 22, 29) 87.1% );
+}
+  /* image styling */
+  img{
+   
+    width: 150px;
+   height: 200px;
+   border-radius: 10px  20px 20px;
+    transition: all 300ms ease-in-out;
+   }
+  img:hover{
+    transform: scale(1.1);
+  }
+  .card{
+    width: 290px;
+    height: 250px;
+    margin-left: 30px;
+    border:none;
+    outline: none;;
+    font-family: roboto;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(7, 6, 7) 0%, rgb(15, 0, 15) 90% );
+  }
+.card-body{
+    display: flex;
+    width: 185px;
+    height: 280px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;  
+  }
+.card-body h1{
+    color:#98BDE6;
+    font-size: 1.8rem;
+}
+
+    /* button styling */
+
+#btn{
+  display: inline-block;
+  padding: 5px;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed; 
+  bottom: 20px;    
+  right: 20px;      
+   z-index: 1000;    /* Ensure it's on top of other content */
+   background-image: linear-gradient( 58.2deg,  rgba(40,91,212,0.73) -3%, rgba(171,53,163,0.45) 49.3%, rgba(255,204,112,0.37) 97.7% );
+  
+  }
+  #btn:hover{
+    background-image: linear-gradient( 109.6deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
+ 
+}
+  .fa-yin-yang{
+    margin-top: 0px;
+    font-size: 15px;
+    color:rgb(100, 211, 241);
+   animation: myspin 103ms infinite; /*for smooth rotation*/
+    
+  }
+  
+  @keyframes myspin {    /*used keyframes to create a animation where the icon is spining
+                          attached to the page reload button*/
+0% {
+/* color: rgb(224, 243, 248);  */
+transform: rotate(0deg);
+}
+
+100% {
+/* color: rgb(3, 0, 0); */
+transform: rotate(360deg);
+
+}
+}
+
+     /* this is the styling of the tooltip for the button to indicate its function */
+
+#btn .tooltip{
+  visibility: hidden;
+  width: 90px;
+  content:"";
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  border-radius: 20px;
+  text-align: center;
+  transition: opacity 0.3s;
+  background-image: linear-gradient( 90.2deg,  rgba(79,255,255,1) 0.3%, rgba(0,213,255,1) 99.8% );
+}
+
+#btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+     
+   /* footer styling  and icon styling*/
+
+footer{
+    margin-top: 15px;
+    height: 100px;
+    backdrop-filter: blur(5px);
+    background-image: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
+  }
+  i{
+    color: aliceblue;
+    padding: 7px;
+    font-size: 18px;
+    transition: all 1000ms;
+  }
+  #insta:hover{
+    background-color: #fd0bdd;
+  }
+  #wats:hover{
+    background-color: #109e63;
+  }
+  #dis:hover{
+    background-color: #2010f8;
+  }
+  #sms:hover{
+    background-color: #9c09f1;
+  }
